@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/*----------------------------*/
+/*-----BACKGROUND-----*/
+/*----------------------------*/
+
+.background {
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.desktop-top {
+  background-image: url(./images/bg-pattern-top-desktop.svg);
+  height: 60rem;
+  width: 60rem;
+  top: 0;
+  left: 0;
+}
+
+.desktop-bottom {
+  background-image: url(./images/bg-pattern-bottom-desktop.svg);
+  height: 65rem;
+  width: 100rem;
+  bottom: 0;
+  right: 0;
+}
+
+.mobile-top,
+.mobile-bottom {
+  display: none;
+}
+
+/*----------------------------*/
+/*-----Main-----*/
+/*----------------------------*/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100rem;
+  margin: 0 2rem;
+}
+
+/*----------------------------*/
+/*-----Header Section-----*/
+/*----------------------------*/
+
+.headers {
+  padding-right: 11rem;
+}
+
+h1 {
+  font-size: 3.8rem;
+  color: hsl(300, 43%, 22%);
+}
+
+.sub-header {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 2rem;
+  color: hsl(303, 10%, 53%);
+  font-weight: 500;
+}
+
+/*----------------------------*/
+/*-----Rating Section-----*/
+/*----------------------------*/
+.ratings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.rating {
+  background-color: hsl(300, 24%, 96%);
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  width: 40rem;
+}
+
+.ratings div:nth-child(2) {
+  align-self: center;
+}
+
+.ratings div:nth-child(3) {
+  align-self: flex-end;
+}
+
+.stars {
+  padding: 0 3.5rem 0 2rem;
+}
+
+.rating > p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+
+/*----------------------------*/
+/*-----Reviews-----*/
+/*----------------------------*/
+.review-cards {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  padding-top: 6rem;
+}
+
+.card {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  color: white;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+}
+
+.bio > img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 2rem;
+  margin: 2rem;
+  margin-left: 0;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.buyer {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+  color: hsl(333, 80%, 67%);
+}
+
+q {
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+
+/*----------------------------*/
+/*-----Footer-----*/
+/*----------------------------*/
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*----------------------------*/
+/*-----Media Queries-----*/
+/*----------------------------*/
+@media only screen and (max-width: 850px) {
+  .desktop-top,
+  .desktop-bottom {
+    display: none;
+  }
+
+  .mobile-top {
+  display: block;
+  background-image: url(./images/bg-pattern-top-mobile.svg);
+  height: 30rem;
+  width: 50rem;
+  top: 0;
+  left: 0;
+}
+
+.mobile-bottom {
+  display: block;
+  background-image: url(./images/bg-pattern-bottom-mobile.svg);
+  height: 32.5rem;
+  width: 50rem;
+  bottom: 0;
+  right: 0;
+}
+
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 3rem;
+  }
+
+  .headers {
+    padding: 8rem 0 3rem;
+    font-size: 2.4rem;
+  }
+
+  .sub-header {
+    font-size: 1.4rem;
+    line-height: 2.5rem;;
+  }
+
+  .ratings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .stars {
+    margin-bottom: 1.5rem;
+  }
+  
+  .ratings .rating:nth-child(3) {
+    align-self: center;
+  }
+
+  .rating {
+    margin: 1rem 0;
+  }
+
+  .review-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    margin-bottom: 1.5rem;
+  }
+
+  footer {
+    display: none;
+  }
