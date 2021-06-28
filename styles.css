@@ -138,11 +138,11 @@ h1 {
   color: white;
 }
 
-.review-cards .card:nth-child(2){
+.review-cards .card:nth-child(2) {
   align-self: center;
 }
 
-.review-cards .card:nth-child(3){
+.review-cards .card:nth-child(3) {
   align-self: flex-end;
 }
 
@@ -201,22 +201,22 @@ footer {
   }
 
   .mobile-top {
-  display: block;
-  background-image: url(./images/bg-pattern-top-mobile.svg);
-  height: 30rem;
-  width: 50rem;
-  top: 0;
-  left: 0;
-}
+    display: block;
+    background-image: url(./images/bg-pattern-top-mobile.svg);
+    height: 30rem;
+    width: 50rem;
+    top: 0;
+    left: 0;
+  }
 
-.mobile-bottom {
-  display: block;
-  background-image: url(./images/bg-pattern-bottom-mobile.svg);
-  height: 32.5rem;
-  width: 50rem;
-  bottom: 0;
-  right: 0;
-}
+  .mobile-bottom {
+    display: block;
+    background-image: url(./images/bg-pattern-bottom-mobile.svg);
+    height: 32.5rem;
+    width: 50rem;
+    bottom: 0;
+    right: 0;
+  }
 
   main {
     display: flex;
@@ -232,7 +232,7 @@ footer {
 
   .sub-header {
     font-size: 1.4rem;
-    line-height: 2.5rem;;
+    line-height: 2.5rem;
   }
 
   .ratings {
@@ -250,7 +250,7 @@ footer {
   .stars {
     margin-bottom: 1.5rem;
   }
-  
+
   .ratings .rating:nth-child(3) {
     align-self: center;
   }
@@ -271,3 +271,4 @@ footer {
   footer {
     display: none;
   }
+}
